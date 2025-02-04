@@ -2,6 +2,6 @@
 
 <img align="left" style="width:260px" src="https://github.com/davidbuzatto/JSGE-Showcase/blob/master/resources/images/logoJSGE.png" width="288px">
 
-Exemplos de uso da JSGE.
+Exemplos de uso da JSGE. Pacotes compilados são disponibilizados nas [releases da JSGE](https://github.com/davidbuzatto/JSGE/releases/latest).
 
-JSGE usage examples.
+JSGE usage examples. Compiled packages are available through [JSGE releases](https://github.com/davidbuzatto/JSGE/releases/latest).
