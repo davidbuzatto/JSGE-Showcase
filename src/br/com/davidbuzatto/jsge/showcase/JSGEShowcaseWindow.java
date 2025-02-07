@@ -19,23 +19,25 @@ package br.com.davidbuzatto.jsge.showcase;
 import br.com.davidbuzatto.jsge.core.engine.EngineFrame;
 import br.com.davidbuzatto.jsge.core.utils.CoreUtils;
 import br.com.davidbuzatto.jsge.core.utils.DrawingUtils;
-import br.com.davidbuzatto.jsge.showcase.singlefile.CollisionDetectionExample;
-import br.com.davidbuzatto.jsge.showcase.singlefile.ColorMethodsExample;
-import br.com.davidbuzatto.jsge.showcase.singlefile.DrawingWithPrimitiveMethodsExample;
-import br.com.davidbuzatto.jsge.showcase.singlefile.DrawingWithPrimitiveObjectsExample;
-import br.com.davidbuzatto.jsge.showcase.singlefile.ImageLoadingProcessingExample;
-import br.com.davidbuzatto.jsge.showcase.singlefile.PaintingCapabilitiesExample;
-import br.com.davidbuzatto.jsge.showcase.singlefile.SoundAndMusicExample;
-import br.com.davidbuzatto.jsge.showcase.singlefile.UserInteractionExample;
-import br.com.davidbuzatto.jsge.showcase.ball.BouncingBallExample;
-import br.com.davidbuzatto.jsge.showcase.animation.AnimationsExample;
-import br.com.davidbuzatto.jsge.showcase.singlefile.CurveSmoothingExample;
-import br.com.davidbuzatto.jsge.showcase.singlefile.GamepadsExample;
-import br.com.davidbuzatto.jsge.showcase.singlefile.IMGUIExample;
-import br.com.davidbuzatto.jsge.showcase.singlefile.ScissorExample;
-import br.com.davidbuzatto.jsge.showcase.camera.CameraExample;
-import br.com.davidbuzatto.jsge.showcase.particles.ParticlesExample;
 import br.com.davidbuzatto.jsge.image.Image;
+import br.com.davidbuzatto.jsge.showcase.animation.AnimationsExample;
+import br.com.davidbuzatto.jsge.showcase.ball.BouncingBallExample;
+import br.com.davidbuzatto.jsge.showcase.camera.CameraExample;
+import br.com.davidbuzatto.jsge.showcase.collision.CollisionDetectionExample;
+import br.com.davidbuzatto.jsge.showcase.color.ColorMethodsExample;
+import br.com.davidbuzatto.jsge.showcase.curve.CurveSmoothingExample;
+import br.com.davidbuzatto.jsge.showcase.image.ImageLoadingProcessingExample;
+import br.com.davidbuzatto.jsge.showcase.imgui.IMGUIExample;
+import br.com.davidbuzatto.jsge.showcase.painting.PaintingCapabilitiesExample;
+import br.com.davidbuzatto.jsge.showcase.particles.ParticlesExample;
+import br.com.davidbuzatto.jsge.showcase.primitives.methods.DrawingWithPrimitiveMethodsExample;
+import br.com.davidbuzatto.jsge.showcase.primitives.objects.DrawingWithPrimitiveObjectsExample;
+import br.com.davidbuzatto.jsge.showcase.scissor.ScissorExample;
+import br.com.davidbuzatto.jsge.showcase.sound.SoundAndMusicExample;
+import br.com.davidbuzatto.jsge.showcase.userinteraction.UserInteractionExample;
+import br.com.davidbuzatto.jsge.showcase.userinteraction.gamepad.GamepadsExample;
+
+
 
 /**
  * Janela do showcase (vitrine) da JSGE.
