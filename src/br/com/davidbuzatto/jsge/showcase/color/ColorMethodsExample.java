@@ -48,7 +48,7 @@ public class ColorMethodsExample extends EngineFrame {
      * Cria o exemplo.
      */
     public ColorMethodsExample() {
-        super( 800, 450, "Color Methods", 60, true, false, false, false, false );
+        super( 800, 450, "Color Methods", 60, true );
     }
     
     @Override
