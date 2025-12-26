@@ -76,6 +76,7 @@ public class PenroseLSystemExample extends EngineFrame {
     public void draw() {
         clearBackground( WHITE );
         turtle.draw( steps, this );
+        drawText( "Use up and down arrows to change generations" , 10, getScreenHeight() - 25, 20, BLACK );
         drawFPS( 10, 10 );
     }
     
