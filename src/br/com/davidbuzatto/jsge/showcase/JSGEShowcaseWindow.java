@@ -34,10 +34,10 @@ import br.com.davidbuzatto.jsge.showcase.primitives.methods.DrawingWithPrimitive
 import br.com.davidbuzatto.jsge.showcase.primitives.objects.DrawingWithPrimitiveObjectsExample;
 import br.com.davidbuzatto.jsge.showcase.scissor.ScissorExample;
 import br.com.davidbuzatto.jsge.showcase.sound.SoundAndMusicExample;
+import br.com.davidbuzatto.jsge.showcase.turtle.PenroseLSystemExample;
+import br.com.davidbuzatto.jsge.showcase.turtle.TurtleGraphicsExample;
 import br.com.davidbuzatto.jsge.showcase.userinteraction.UserInteractionExample;
 import br.com.davidbuzatto.jsge.showcase.userinteraction.gamepad.GamepadsExample;
-
-
 
 /**
  * Janela do showcase (vitrine) da JSGE.
@@ -83,6 +83,8 @@ public class JSGEShowcaseWindow extends javax.swing.JFrame {
         btnScissor = new javax.swing.JButton();
         btnSoundAndMusic = new javax.swing.JButton();
         btnAnimations = new javax.swing.JButton();
+        btnTurtleGraphics = new javax.swing.JButton();
+        btnPenroseLSystem = new javax.swing.JButton();
         btnGamepads = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -197,6 +199,20 @@ public class JSGEShowcaseWindow extends javax.swing.JFrame {
             }
         });
 
+        btnTurtleGraphics.setText("Turtle Graphics");
+        btnTurtleGraphics.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTurtleGraphicsActionPerformed(evt);
+            }
+        });
+
+        btnPenroseLSystem.setText("Penrose L-System");
+        btnPenroseLSystem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPenroseLSystemActionPerformed(evt);
+            }
+        });
+
         btnGamepads.setText("Gamepads");
         btnGamepads.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -213,13 +229,13 @@ public class JSGEShowcaseWindow extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnDrawingPrimitiveMethods, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnDrawingPrimitiveObjects, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnCollisionDetection, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnCollisionDetection, javax.swing.GroupLayout.DEFAULT_SIZE, 386, Short.MAX_VALUE)
                     .addComponent(btnImageLoadingAndProcessing, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnUserInteraction, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnColorMethods, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnBouncingBall, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnParticles, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblHeader, javax.swing.GroupLayout.DEFAULT_SIZE, 386, Short.MAX_VALUE)
+                    .addComponent(lblHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnCamera, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnSoundAndMusic, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnPaintingCapabilities, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -227,7 +243,11 @@ public class JSGEShowcaseWindow extends javax.swing.JFrame {
                     .addComponent(btnGamepads, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnCurveSmoothing, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnScissor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnIMGUI, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnIMGUI, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnTurtleGraphics, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnPenroseLSystem, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -266,8 +286,12 @@ public class JSGEShowcaseWindow extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnAnimations)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnTurtleGraphics)
+                    .addComponent(btnPenroseLSystem))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnGamepads)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
@@ -338,6 +362,14 @@ public class JSGEShowcaseWindow extends javax.swing.JFrame {
         initExample( new IMGUIExample() );
     }//GEN-LAST:event_btnIMGUIActionPerformed
 
+    private void btnTurtleGraphicsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTurtleGraphicsActionPerformed
+        initExample( new TurtleGraphicsExample() );
+    }//GEN-LAST:event_btnTurtleGraphicsActionPerformed
+
+    private void btnPenroseLSystemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPenroseLSystemActionPerformed
+        initExample( new PenroseLSystemExample() );
+    }//GEN-LAST:event_btnPenroseLSystemActionPerformed
+
     private void initExample( EngineFrame example ) {
         example.setIconImage( logoImage.buffImage );
         example.setDefaultCloseOperation( DISPOSE_ON_CLOSE );
@@ -395,8 +427,10 @@ public class JSGEShowcaseWindow extends javax.swing.JFrame {
     private javax.swing.JButton btnImageLoadingAndProcessing;
     private javax.swing.JButton btnPaintingCapabilities;
     private javax.swing.JButton btnParticles;
+    private javax.swing.JButton btnPenroseLSystem;
     private javax.swing.JButton btnScissor;
     private javax.swing.JButton btnSoundAndMusic;
+    private javax.swing.JButton btnTurtleGraphics;
     private javax.swing.JButton btnUserInteraction;
     private javax.swing.JLabel lblHeader;
     // End of variables declaration//GEN-END:variables

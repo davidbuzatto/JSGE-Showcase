@@ -29,13 +29,13 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="btnDrawingPrimitiveMethods" max="32767" attributes="0"/>
                   <Component id="btnDrawingPrimitiveObjects" alignment="0" max="32767" attributes="0"/>
-                  <Component id="btnCollisionDetection" alignment="0" max="32767" attributes="0"/>
+                  <Component id="btnCollisionDetection" alignment="0" pref="386" max="32767" attributes="0"/>
                   <Component id="btnImageLoadingAndProcessing" alignment="0" max="32767" attributes="0"/>
                   <Component id="btnUserInteraction" alignment="0" max="32767" attributes="0"/>
                   <Component id="btnColorMethods" alignment="0" max="32767" attributes="0"/>
                   <Component id="btnBouncingBall" alignment="0" max="32767" attributes="0"/>
                   <Component id="btnParticles" alignment="0" max="32767" attributes="0"/>
-                  <Component id="lblHeader" alignment="0" pref="386" max="32767" attributes="0"/>
+                  <Component id="lblHeader" alignment="0" max="32767" attributes="0"/>
                   <Component id="btnCamera" alignment="0" max="32767" attributes="0"/>
                   <Component id="btnSoundAndMusic" alignment="0" max="32767" attributes="0"/>
                   <Component id="btnPaintingCapabilities" alignment="0" max="32767" attributes="0"/>
@@ -44,6 +44,11 @@
                   <Component id="btnCurveSmoothing" alignment="0" max="32767" attributes="0"/>
                   <Component id="btnScissor" alignment="0" max="32767" attributes="0"/>
                   <Component id="btnIMGUI" alignment="1" max="32767" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="btnTurtleGraphics" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="btnPenroseLSystem" min="-2" pref="189" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -85,8 +90,13 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="btnAnimations" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="btnGamepads" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnTurtleGraphics" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnPenroseLSystem" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace max="32767" attributes="0"/>
+              <Component id="btnGamepads" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -219,6 +229,22 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAnimationsActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnTurtleGraphics">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Turtle Graphics"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTurtleGraphicsActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnPenroseLSystem">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Penrose L-System"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPenroseLSystemActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnGamepads">
