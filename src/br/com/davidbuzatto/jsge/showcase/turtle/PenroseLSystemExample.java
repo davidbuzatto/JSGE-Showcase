@@ -99,7 +99,7 @@ public class PenroseLSystemExample extends EngineFrame {
         ls.ruleY = "-WF++XF[+++YF++ZF]-";
         ls.ruleZ = "--YF++++WF[+ZF++++XF]--XF";
         ls.drawLength = drawLength;
-        ls.theta = 36.0f;
+        ls.theta = 36;
 
         return ls;
         
