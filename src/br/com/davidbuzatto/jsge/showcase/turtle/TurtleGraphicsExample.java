@@ -20,7 +20,7 @@ import br.com.davidbuzatto.jsge.core.engine.EngineFrame;
 import br.com.davidbuzatto.jsge.image.Image;
 import br.com.davidbuzatto.jsge.imgui.GuiColorPicker;
 import br.com.davidbuzatto.jsge.turtle.Turtle;
-import br.com.davidbuzatto.jsge.turtle.TurtleState;
+import br.com.davidbuzatto.jsge.turtle.TurtleStep;
 
 /**
  * Exemplo de Gráfico de Tartaruga (Turtle Graphics).
@@ -61,31 +61,31 @@ public class TurtleGraphicsExample extends EngineFrame {
         double amount = 5;
 
         if ( isKeyPressed( KEY_UP ) ) {
-            turtle.setBrushPaint( colorPicker.getColor() );
-            turtle.moveForward( length );
+            turtle.setPenColor( colorPicker.getColor() );
+            turtle.forward( length );
         } else if ( isKeyPressed( KEY_DOWN ) ) {
-            turtle.setBrushPaint( colorPicker.getColor() );
-            turtle.moveBackward(length );
+            turtle.setPenColor( colorPicker.getColor() );
+            turtle.backward(length );
         } else if ( isKeyPressed( KEY_LEFT ) ) {
-            turtle.setBrushPaint( colorPicker.getColor() );
-            turtle.moveLeft( length );
+            turtle.setPenColor( colorPicker.getColor() );
+            turtle.left( length );
         } else if ( isKeyPressed( KEY_RIGHT ) ) {
-            turtle.setBrushPaint( colorPicker.getColor() );
-            turtle.moveRight( length );
+            turtle.setPenColor( colorPicker.getColor() );
+            turtle.right( length );
         } else if ( isKeyPressed( KEY_PAGE_UP ) ) {
             turtle.rotate( -amount );
         } else if ( isKeyPressed( KEY_PAGE_DOWN ) ) {
             turtle.rotate( amount );
         } else if ( isKeyPressed( KEY_EQUAL ) ) {
-            turtle.increaseBrushWidth();
+            turtle.increasePenWidth();
         } else if ( isKeyPressed( KEY_MINUS ) ) {
-            turtle.decreaseBrushWidth();
+            turtle.decreasePenWidth();
         } else if ( isKeyPressed( KEY_F1 ) ) {
-            turtle.toggleBrush();
+            turtle.togglePen();
         } else if ( isKeyPressed( KEY_S ) ) {
-            turtle.save();
+            turtle.saveState();
         } else if ( isKeyPressed( KEY_R ) ) {
-            turtle.restore();
+            turtle.restoreState();
         }
         
         colorPicker.update( delta );
@@ -102,7 +102,7 @@ public class TurtleGraphicsExample extends EngineFrame {
         double width = 6;
         double veWidth = 20;
 
-        TurtleState s = turtle.getCurrentState();
+        TurtleStep s = turtle.getCurrentState();
 
         turtleImage.draw( 
             this, 

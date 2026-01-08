@@ -68,7 +68,7 @@ public class PenroseLSystemExample extends EngineFrame {
             }
         }
         
-        steps = MathUtils.clamp( steps + STEPS_STEP, 1, turtle.getFrameCount() );
+        steps = MathUtils.clamp( steps + STEPS_STEP, 1, turtle.getStepCount() );
         
     }
     
@@ -138,8 +138,8 @@ public class PenroseLSystemExample extends EngineFrame {
         }
         
         Turtle t = new Turtle( getScreenWidth() / 2, getScreenHeight() / 2 );
-        t.setBrushPaint( ColorUtils.fade( BLACK, 0 ) );
-        t.setBrushWidth( 2 );
+        t.setPenColor( ColorUtils.fade( BLACK, 0 ) );
+        t.setPenWidth( 2 );
         
         int repeats = 1;
         
@@ -148,13 +148,13 @@ public class PenroseLSystemExample extends EngineFrame {
             switch ( step ) {
                 case 'F':
                     for ( int j = 0; j < repeats; j++ ) {
-                        t.setBrushPaint( ColorUtils.fade( BLACK, 0.2 ) );
-                        /*t.setBrushPaint( 
+                        t.setPenColor( ColorUtils.fade( BLACK, 0.2 ) );
+                        /*t.setPenColor( 
                             ColorUtils.fade( 
                                 ColorUtils.colorFromHSV( t.getCurrentState().angle(), 1, 1 ), 0.2
                             )
                         );*/
-                        t.moveForward( ls.drawLength );
+                        t.forward( ls.drawLength );
                     }
                     repeats = 1;
                     break;
@@ -171,10 +171,10 @@ public class PenroseLSystemExample extends EngineFrame {
                     repeats = 1;
                     break;
                 case '[':
-                    t.save();
+                    t.saveState();
                     break;
                 case ']':
-                    t.restoreNotPurge();
+                    t.restoreStateKeepPath();
                     break;
                 default:
                     if ( ( step >= 48 ) && ( step <= 57 ) ){
