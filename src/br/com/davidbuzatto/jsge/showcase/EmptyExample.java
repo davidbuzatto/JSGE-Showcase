@@ -19,14 +19,14 @@ package br.com.davidbuzatto.jsge.showcase;
 import br.com.davidbuzatto.jsge.core.engine.EngineFrame;
 
 /**
- * Template de exemplo.
- * 
+ * Example template.
+ *
  * @author Prof. Dr. David Buzatto
  */
 public class EmptyExample extends EngineFrame {
 
     /**
-     * Cria o exemplo.
+     * Creates the example.
      */
     public EmptyExample() {
         super( 800, 450, "Empty", 60, true );
@@ -46,8 +46,8 @@ public class EmptyExample extends EngineFrame {
     }
     
     /**
-     * Executa o exemplo.
-     * @param args Argumentos.
+     * Runs the example.
+     * @param args Arguments.
      */
     public static void main( String[] args ) {
         new EmptyExample();

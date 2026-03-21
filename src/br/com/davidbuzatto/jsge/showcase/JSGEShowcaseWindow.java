@@ -40,8 +40,8 @@ import br.com.davidbuzatto.jsge.showcase.userinteraction.UserInteractionExample;
 import br.com.davidbuzatto.jsge.showcase.userinteraction.gamepad.GamepadsExample;
 
 /**
- * Janela do showcase (vitrine) da JSGE.
- * 
+ * JSGE showcase window.
+ *
  * @author Prof. Dr. David Buzatto
  */
 public class JSGEShowcaseWindow extends javax.swing.JFrame {
@@ -376,8 +376,8 @@ public class JSGEShowcaseWindow extends javax.swing.JFrame {
     }
     
     /**
-     * Executa o Showcase.
-     * 
+     * Runs the Showcase.
+     *
      * @param args the command line arguments
      */
     public static void main( String args[] ) {

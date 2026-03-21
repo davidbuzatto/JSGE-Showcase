@@ -34,8 +34,8 @@ import br.com.davidbuzatto.jsge.geom.Star;
 import br.com.davidbuzatto.jsge.geom.Triangle;
 
 /**
- * Exemplos de utilização dos objetos primitivos para desenho.
- * 
+ * Examples of using primitive objects for drawing.
+ *
  * @author Prof. Dr. David Buzatto
  */
 public class DrawingWithPrimitiveObjectsExample extends EngineFrame {
@@ -57,7 +57,7 @@ public class DrawingWithPrimitiveObjectsExample extends EngineFrame {
     private Path path;
     
     /**
-     * Cria o exemplo.
+     * Creates the example.
      */
     public DrawingWithPrimitiveObjectsExample() {
         super( 500, 560, "Drawing with Primitive Objects", 60, true );
@@ -153,8 +153,8 @@ public class DrawingWithPrimitiveObjectsExample extends EngineFrame {
     }
 
     /**
-     * Executa o exemplo.
-     * @param args Argumentos.
+     * Runs the example.
+     * @param args Arguments.
      */
     public static void main( String[] args ) {
         new DrawingWithPrimitiveObjectsExample();

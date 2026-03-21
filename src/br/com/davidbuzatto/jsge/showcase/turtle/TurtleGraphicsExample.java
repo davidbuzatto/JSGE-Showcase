@@ -23,8 +23,8 @@ import br.com.davidbuzatto.jsge.turtle.Turtle;
 import br.com.davidbuzatto.jsge.turtle.TurtleStep;
 
 /**
- * Exemplo de Gráfico de Tartaruga (Turtle Graphics).
- * 
+ * Turtle Graphics example.
+ *
  * @author Prof. Dr. David Buzatto
  */
 public class TurtleGraphicsExample extends EngineFrame {
@@ -34,7 +34,7 @@ public class TurtleGraphicsExample extends EngineFrame {
     private GuiColorPicker colorPicker;
     
     /**
-     * Cria o exemplo.
+     * Creates the example.
      */
     public TurtleGraphicsExample() {
         super( 800, 450, "Turtle Graphics", 60, true, false, false, false, false, false );
@@ -126,8 +126,8 @@ public class TurtleGraphicsExample extends EngineFrame {
     }
     
     /**
-     * Executa o exemplo.
-     * @param args Argumentos.
+     * Runs the example.
+     * @param args Arguments.
      */
     public static void main( String[] args ) {
         new TurtleGraphicsExample();

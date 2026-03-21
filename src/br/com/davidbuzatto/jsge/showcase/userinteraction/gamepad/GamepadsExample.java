@@ -20,8 +20,8 @@ import br.com.davidbuzatto.jsge.core.engine.EngineFrame;
 import java.awt.Color;
 
 /**
- * Exemplo de uso de gamepads/joysticks/controles.
- * 
+ * Example of using gamepads/joysticks/controllers.
+ *
  * @author Prof. Dr. David Buzatto
  */
 public class GamepadsExample extends EngineFrame {
@@ -67,7 +67,7 @@ public class GamepadsExample extends EngineFrame {
     private int currentSkin;
     
     /**
-     * Cria o exemplo.
+     * Creates the example.
      */
     public GamepadsExample() {
         super( 620, 505, "Gamepads", 60, true );
@@ -359,8 +359,8 @@ public class GamepadsExample extends EngineFrame {
     }
     
     /**
-     * Executa o exemplo.
-     * @param args Argumentos.
+     * Runs the example.
+     * @param args Arguments.
      */
     public static void main( String[] args ) {
         new GamepadsExample();

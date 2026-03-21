@@ -34,8 +34,8 @@ import br.com.davidbuzatto.jsge.geom.Triangle;
 import br.com.davidbuzatto.jsge.image.Image;
 
 /**
- * Exemplo de recortes.
- * 
+ * Scissor clipping example.
+ *
  * @author Prof. Dr. David Buzatto
  */
 public class ScissorExample extends EngineFrame {
@@ -78,7 +78,7 @@ public class ScissorExample extends EngineFrame {
     private int currentScissor;
     
     /**
-     * Cria o exemplo.
+     * Creates the example.
      */
     public ScissorExample() {
         super( 600, 600, "Scissor", 60, true );
@@ -159,8 +159,8 @@ public class ScissorExample extends EngineFrame {
     }
     
     /**
-     * Executa o exemplo.
-     * @param args Argumentos.
+     * Runs the example.
+     * @param args Arguments.
      */
     public static void main( String[] args ) {
         new ScissorExample();

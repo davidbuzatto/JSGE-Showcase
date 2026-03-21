@@ -22,8 +22,8 @@ import br.com.davidbuzatto.jsge.collision.CollisionUtils;
 import java.awt.Color;
 
 /**
- * Representação de uma bola com propriedades físicas.
- * 
+ * Representation of a ball with physical properties.
+ *
  * @author Prof. Dr. David Buzatto
  */
 public class Ball {
@@ -41,14 +41,14 @@ public class Ball {
     private double yOffset;
 
     /**
-     * Cria uma bolinha.
-     * 
-     * @param pos posição.
-     * @param vel verlocidade.
-     * @param radius raio.
-     * @param friction atrito.
-     * @param alasticity elasticidade.
-     * @param color cor.
+     * Creates a ball.
+     *
+     * @param pos position.
+     * @param vel velocity.
+     * @param radius radius.
+     * @param friction friction.
+     * @param alasticity elasticity.
+     * @param color color.
      */
     public Ball( Vector2 pos, Vector2 vel, double radius, double friction, double alasticity, Color color ) {
         this.pos = pos;
@@ -61,9 +61,9 @@ public class Ball {
     }
 
     /**
-     * Atualiza a bolinha.
-     * 
-     * @param delta variação do tempo.
+     * Updates the ball.
+     *
+     * @param delta time delta.
      * @param engine engine.
      */
     void update( double delta, EngineFrame engine ) {
@@ -114,8 +114,8 @@ public class Ball {
     }
     
     /**
-     * Desenha a bolinha.
-     * 
+     * Draws the ball.
+     *
      * @param engine engine.
      */
     void draw( EngineFrame engine ) {

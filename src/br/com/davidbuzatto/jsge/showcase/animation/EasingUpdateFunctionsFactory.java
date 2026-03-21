@@ -24,18 +24,18 @@ import br.com.davidbuzatto.jsge.animation.tween.TweenAnimationComponentMapper;
 import java.util.function.DoubleFunction;
 
 /**
- * Uma fábrica de funções de atualização com suavização para as animações
- * interpoladas suavizadas do exemplo de animações.
- * 
+ * A factory of easing update functions for the eased tween animations
+ * in the animations example.
+ *
  * @author Prof. Dr. David Buzatto
  */
 public interface EasingUpdateFunctionsFactory {
     
     /**
-     * Fabrica uma função de interpolação em x com suavização.
-     * 
-     * @param <ComponentType> Tipo do componente.
-     * @return A função de interpolação.
+     * Creates an eased interpolation function along the x axis.
+     *
+     * @param <ComponentType> The component type.
+     * @return The interpolation function.
      */
     public static <ComponentType> EasingTweenAnimationUpdateFunction<ComponentType> tweenX() {
         return ( 
@@ -69,10 +69,10 @@ public interface EasingUpdateFunctionsFactory {
     }
     
     /**
-     * Fabrica uma função de interpolação em y com suavização.
-     * 
-     * @param <ComponentType> Tipo do componente.
-     * @return A função de interpolação.
+     * Creates an eased interpolation function along the y axis.
+     *
+     * @param <ComponentType> The component type.
+     * @return The interpolation function.
      */
     public static <ComponentType> EasingTweenAnimationUpdateFunction<ComponentType> tweenY() {
         return ( 
@@ -106,10 +106,10 @@ public interface EasingUpdateFunctionsFactory {
     }
     
     /**
-     * Fabrica uma função de interpolação em x e y com suavização.
-     * 
-     * @param <ComponentType> Tipo do componente.
-     * @return A função de interpolação.
+     * Creates an eased interpolation function along both x and y axes.
+     *
+     * @param <ComponentType> The component type.
+     * @return The interpolation function.
      */
     public static <ComponentType> EasingTweenAnimationUpdateFunction<ComponentType> tweenXY() {
         return ( 
@@ -145,10 +145,10 @@ public interface EasingUpdateFunctionsFactory {
     }
     
     /**
-     * Fabrica uma função de interpolação para raio com suavização.
-     * 
-     * @param <ComponentType> Tipo do componente.
-     * @return A função de interpolação.
+     * Creates an eased interpolation function for the radius.
+     *
+     * @param <ComponentType> The component type.
+     * @return The interpolation function.
      */
     public static <ComponentType> EasingTweenAnimationUpdateFunction<ComponentType> tweenRadius() {
         return ( 
@@ -182,10 +182,10 @@ public interface EasingUpdateFunctionsFactory {
     }
     
     /**
-     * Fabrica uma função de interpolação para transparência com suavização.
-     * 
-     * @param <ComponentType> Tipo do componente.
-     * @return A função de interpolação.
+     * Creates an eased interpolation function for transparency (alpha).
+     *
+     * @param <ComponentType> The component type.
+     * @return The interpolation function.
      */
     public static <ComponentType> EasingTweenAnimationUpdateFunction<ComponentType> tweenAlpha() {
         return ( 
@@ -220,10 +220,10 @@ public interface EasingUpdateFunctionsFactory {
     }
     
     /**
-     * Fabrica uma função de interpolação para rotação com suavização.
-     * 
-     * @param <ComponentType> Tipo do componente.
-     * @return A função de interpolação.
+     * Creates an eased interpolation function for rotation.
+     *
+     * @param <ComponentType> The component type.
+     * @return The interpolation function.
      */
     public static <ComponentType> EasingTweenAnimationUpdateFunction<ComponentType> tweenRotation() {
         return ( 

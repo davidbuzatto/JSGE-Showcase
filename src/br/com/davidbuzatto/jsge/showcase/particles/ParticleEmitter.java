@@ -24,52 +24,52 @@ import br.com.davidbuzatto.jsge.math.MathUtils;
 import java.awt.Color;
 
 /**
- * Um emissor de partículas.
- * 
+ * A particle emitter.
+ *
  * @author Prof. Dr. David Buzatto
  */
 public class ParticleEmitter {
     
-    /** posição */
+    /** position */
     public Vector2 pos;
-    
-    /** velocidade */
+
+    /** velocity */
     public Vector2 vel;
-    
-    /** ângulo de lançamento */
+
+    /** launch angle */
     public double launchAngle;
-    
-    /** ângulo da posição (movimento) */
+
+    /** position angle (movement) */
     public double posAngle;
-    
-    /** velocidade do ângulo da posição */
+
+    /** position angle velocity */
     public double posAngleVel;
-    
-    /** ângulo da matiz */
+
+    /** hue angle */
     public double hueAngle;
-    
-    /** velocidade do ângulo da matiz */
+
+    /** hue angle velocity */
     public double hueAngleVel;
-    
-    /** raio */
+
+    /** radius */
     public double radius;
-    
-    /** se está sendo arrastado */
+
+    /** whether it is being dragged */
     public boolean dragging;
-    
-    /** se é arrastável */
+
+    /** whether it is draggable */
     public boolean draggable;
-    
-    /** se o mouse está em cima */
+
+    /** whether the mouse is over it */
     public boolean mouseOver;
-    
-    /** posição de uma nova particula */
+
+    /** position of a new particle */
     public int newParticlePos;
-    
-    /** quantidade de partículas */
+
+    /** particle count */
     public int particleQuantity;
-    
-    /** partículas */
+
+    /** particles */
     public Particle[] particles;
     
     private double xOffset;
@@ -78,16 +78,16 @@ public class ParticleEmitter {
     private static final double PE_RANDOM_MULTIPLIER = 1000.0;
     
     /**
-     * Cria um emissor de partículas.
-     * 
-     * @param pos Posição.
-     * @param vel Velocidade.
-     * @param launchAngle Ângulo de lançamento.
-     * @param posAngleVel Ângulo de posição.
-     * @param hueAngleVel Ângulo da matiz.
-     * @param radius Raio.
-     * @param draggable Se é arrastável.
-     * @param maxParticles Quantidade máxima de partículas.
+     * Creates a particle emitter.
+     *
+     * @param pos Position.
+     * @param vel Velocity.
+     * @param launchAngle Launch angle.
+     * @param posAngleVel Position angle velocity.
+     * @param hueAngleVel Hue angle velocity.
+     * @param radius Radius.
+     * @param draggable Whether it is draggable.
+     * @param maxParticles Maximum number of particles.
      */
     public ParticleEmitter( Vector2 pos, Vector2 vel, double launchAngle, double posAngleVel, double hueAngleVel, double radius, boolean draggable, int maxParticles ) {
         this.pos = pos;
@@ -105,9 +105,9 @@ public class ParticleEmitter {
     }
     
     /**
-     * Desenha o emissor.
-     * 
-     * @param engine A engine.
+     * Draws the emitter.
+     *
+     * @param engine The engine.
      */
     public void draw( EngineFrame engine ) {
 
@@ -123,9 +123,9 @@ public class ParticleEmitter {
     }
 
     /**
-     * Atualiza a posição usando seno e o ângulo.
-     * @param delta Variaçao do tempo.
-     * @param engine A engine.
+     * Updates the position using sine and the angle.
+     * @param delta Time delta.
+     * @param engine The engine.
      */
     public void updateMoveSin( double delta, EngineFrame engine ) {
 
@@ -152,9 +152,9 @@ public class ParticleEmitter {
     }
 
     /**
-     * Atualiza um emissor estático.
-     * 
-     * @param delta Variação do tempo.
+     * Updates a static emitter.
+     *
+     * @param delta Time delta.
      */
     public void updateStatic( double delta ) {
 
@@ -167,9 +167,9 @@ public class ParticleEmitter {
     }
 
     /**
-     * Atualiza um emissor de matiz.
-     * 
-     * @param delta Variação do tempo.
+     * Updates a hue emitter.
+     *
+     * @param delta Time delta.
      */
     public void updateHueAngleBouncing( double delta ) {
 
@@ -186,12 +186,12 @@ public class ParticleEmitter {
     }
 
     /**
-     * Emite uma partícula.
-     * 
-     * @param pos Posição.
-     * @param vel Velocidade.
-     * @param radius Raio.
-     * @param color Cor.
+     * Emits a particle.
+     *
+     * @param pos Position.
+     * @param vel Velocity.
+     * @param radius Radius.
+     * @param color Color.
      */
     public void emitParticle( Vector2 pos, Vector2 vel, double radius, Color color ) {
 
@@ -215,27 +215,27 @@ public class ParticleEmitter {
     }
     
     /**
-     * Emite uma partícula em um intervalo de cor.
-     * 
-     * @param vel Velocidade.
-     * @param minRadius Raio mínimo.
-     * @param maxRadius Raio máximo.
-     * @param startHue Matiz inicial.
-     * @param endHue Matiz final.
+     * Emits a particle within a color interval.
+     *
+     * @param vel Velocity.
+     * @param minRadius Minimum radius.
+     * @param maxRadius Maximum radius.
+     * @param startHue Starting hue.
+     * @param endHue Ending hue.
      */
     public void emitParticleColorInterval( Vector2 vel, double minRadius, double maxRadius, double startHue, double endHue ) {
         emitParticlePositionColorInterval( pos, vel, minRadius, maxRadius, startHue, endHue );
     }
 
     /**
-     * Emite uma partícula com posição e intervalo de cor.
-     * 
-     * @param pos Posição.
-     * @param vel Velocidade.
-     * @param minRadius Raio mínimo.
-     * @param maxRadius Raio máximo.
-     * @param startHue Matiz inicial.
-     * @param endHue Matiz final.
+     * Emits a particle with a position and color interval.
+     *
+     * @param pos Position.
+     * @param vel Velocity.
+     * @param minRadius Minimum radius.
+     * @param maxRadius Maximum radius.
+     * @param startHue Starting hue.
+     * @param endHue Ending hue.
      */
     public void emitParticlePositionColorInterval( Vector2 pos, Vector2 vel, double minRadius, double maxRadius, double startHue, double endHue ) {
         emitParticle( 
@@ -251,12 +251,12 @@ public class ParticleEmitter {
     }
 
     /**
-     * Verifica se a posição do mouse está em cima do emissor.
-     * 
-     * @param pePos Posição do emissor.
-     * @param peRadius Raio do emissor.
-     * @param mousePos Posição do mouse.
-     * @return a.
+     * Checks whether the mouse position is over the emitter.
+     *
+     * @param pePos Emitter position.
+     * @param peRadius Emitter radius.
+     * @param mousePos Mouse position.
+     * @return true if the mouse is over the emitter, false otherwise.
      */
     public boolean isMouseOverParticleEmitter( Vector2 pePos, double peRadius, Vector2 mousePos ) {
 

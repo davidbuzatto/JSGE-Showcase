@@ -22,8 +22,8 @@ import br.com.davidbuzatto.jsge.core.utils.ColorUtils;
 import br.com.davidbuzatto.jsge.math.Vector2;
 
 /**
- * Exemplos de utilização dos métotodos de desenho de primitivas.
- * 
+ * Examples of using primitive drawing methods.
+ *
  * @author Prof. Dr. David Buzatto
  */
 public class DrawingWithPrimitiveMethodsExample extends EngineFrame {
@@ -33,7 +33,7 @@ public class DrawingWithPrimitiveMethodsExample extends EngineFrame {
     private Vector2 draggedPoint;
     
     /**
-     * Cria o exemplo.
+     * Creates the example.
      */
     public DrawingWithPrimitiveMethodsExample() {
         super( 720, 560, "Drawing with Primitive Methods", 60, true );
@@ -106,7 +106,7 @@ public class DrawingWithPrimitiveMethodsExample extends EngineFrame {
     }
 
     /**
-     * Desenha o estado dos objetos/contextos/variáveis do jogo ou simulação.
+     * Draws the state of the game or simulation objects/contexts/variables.
      */
     @Override
     public void draw() {
@@ -182,8 +182,8 @@ public class DrawingWithPrimitiveMethodsExample extends EngineFrame {
     }
     
     /**
-     * Executa o exemplo.
-     * @param args Argumentos.
+     * Runs the example.
+     * @param args Arguments.
      */
     public static void main( String[] args ) {
         new DrawingWithPrimitiveMethodsExample();

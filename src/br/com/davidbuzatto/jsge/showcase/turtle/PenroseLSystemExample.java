@@ -22,9 +22,9 @@ import br.com.davidbuzatto.jsge.math.MathUtils;
 import br.com.davidbuzatto.jsge.turtle.Turtle;
 
 /**
- * Exemplo de Gráfico de Tartaruga para desenhar um L-System que gera padrões
- * de Penrose.
- * 
+ * Turtle Graphics example for drawing an L-System that generates Penrose
+ * patterns.
+ *
  * @author Prof. Dr. David Buzatto
  */
 public class PenroseLSystemExample extends EngineFrame {
@@ -39,7 +39,7 @@ public class PenroseLSystemExample extends EngineFrame {
     private int steps = 1;
     
     /**
-     * Cria o exemplo.
+     * Creates the example.
      */
     public PenroseLSystemExample() {
         super( 800, 450, "Penrose L-System", 60, true, false, false, false, false, false );
@@ -189,8 +189,8 @@ public class PenroseLSystemExample extends EngineFrame {
     }
     
     /**
-     * Executa o exemplo.
-     * @param args Argumentos.
+     * Runs the example.
+     * @param args Arguments.
      */
     public static void main( String[] args ) {
         new PenroseLSystemExample();
