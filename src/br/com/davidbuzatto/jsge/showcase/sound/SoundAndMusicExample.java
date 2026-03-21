@@ -28,8 +28,8 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 /**
- * Exemplo de uso de som e música.
- * 
+ * Example of using sound and music.
+ *
  * @author Prof. Dr. David Buzatto
  */
 public class SoundAndMusicExample extends EngineFrame {
@@ -99,7 +99,7 @@ public class SoundAndMusicExample extends EngineFrame {
     private double musicVolume;
     
     /**
-     * Cria o exemplo.
+     * Creates the example.
      */
     public SoundAndMusicExample() {
         super( 610, 160, "Sound and Music", 60, true );
@@ -279,8 +279,8 @@ public class SoundAndMusicExample extends EngineFrame {
     }
     
     /**
-     * Executa o exemplo.
-     * @param args Argumentos.
+     * Runs the example.
+     * @param args Arguments.
      */
     public static void main( String[] args ) {
         new SoundAndMusicExample();

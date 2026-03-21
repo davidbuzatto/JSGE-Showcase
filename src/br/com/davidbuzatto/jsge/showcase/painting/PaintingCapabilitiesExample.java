@@ -24,8 +24,8 @@ import java.awt.Color;
 import java.awt.Paint;
 
 /**
- * Exemplo das funcionalidades de pintura.
- * 
+ * Example of painting capabilities.
+ *
  * @author Prof. Dr. David Buzatto
  */
 public class PaintingCapabilitiesExample extends EngineFrame {
@@ -50,7 +50,7 @@ public class PaintingCapabilitiesExample extends EngineFrame {
     private Paint imagePaint;
     
     /**
-     * Cria o exemplo.
+     * Creates the example.
      */
     public PaintingCapabilitiesExample() {
         super( 630, 420, "Painting Capabilities", 60, true );
@@ -125,8 +125,8 @@ public class PaintingCapabilitiesExample extends EngineFrame {
     }
     
     /**
-     * Executa o exemplo.
-     * @param args Argumentos.
+     * Runs the example.
+     * @param args Arguments.
      */
     public static void main( String[] args ) {
         new PaintingCapabilitiesExample();

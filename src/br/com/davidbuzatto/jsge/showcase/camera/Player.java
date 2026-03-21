@@ -22,14 +22,14 @@ import br.com.davidbuzatto.jsge.math.Vector2;
 import java.awt.Color;
 
 /**
- * Modelo de um jogador para o exemplo de uso da câmera.
- * 
+ * Player model for the camera usage example.
+ *
  * @author Prof. Dr. David Buzatto
  */
 public class Player {
     
     /**
-     * Posição do jogador.
+     * Player position.
      */
     public Vector2 pos;
     private Vector2 dim;
@@ -38,12 +38,12 @@ public class Player {
     private Color color;
 
     /**
-     * Cria o jogador do exemplo da câmera.
-     * 
-     * @param pos Posição.
-     * @param dim Dimensão.
-     * @param speed Velocidade.
-     * @param color Cor.
+     * Creates the player for the camera example.
+     *
+     * @param pos Position.
+     * @param dim Dimension.
+     * @param speed Speed.
+     * @param color Color.
      */
     public Player( Vector2 pos, Vector2 dim, double speed, Color color ) {
         this.pos = pos;
@@ -54,10 +54,10 @@ public class Player {
     }
     
     /**
-     * Atualiza o jogador.
-     * 
-     * @param delta Variação do tempo.
-     * @param boundary Limites.
+     * Updates the player.
+     *
+     * @param delta Time delta.
+     * @param boundary Boundary limits.
      * @param engine EngineFrame.
      */
     public void update( double delta, Rectangle boundary, EngineFrame engine ) {
@@ -96,8 +96,8 @@ public class Player {
     }
     
     /**
-     * Desenha o jogador.
-     * 
+     * Draws the player.
+     *
      * @param engine EngineFrame.
      */
     public void draw( EngineFrame engine ) {

@@ -38,9 +38,9 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
- * Exemplos de utilização dos métodos de detecção de colisão e de pontos
- * em linhas e curvas.
- * 
+ * Examples of using collision detection methods and point
+ * queries on lines and curves.
+ *
  * @author Prof. Dr. David Buzatto
  */
 public class CollisionDetectionExample extends EngineFrame {
@@ -105,7 +105,7 @@ public class CollisionDetectionExample extends EngineFrame {
     private List<Rectangle> overlaps;
     
     /**
-     * Cria o exemplo.
+     * Creates the example.
      */
     public CollisionDetectionExample() {
         super( 800, 710, "Collision Detection, Points at Lines and Curves and AABBQuadtree", 60, true );
@@ -442,8 +442,8 @@ public class CollisionDetectionExample extends EngineFrame {
     }
     
     /**
-     * Executa o exemplo.
-     * @param args Argumentos.
+     * Runs the example.
+     * @param args Arguments.
      */
     public static void main( String[] args ) {
         new CollisionDetectionExample();

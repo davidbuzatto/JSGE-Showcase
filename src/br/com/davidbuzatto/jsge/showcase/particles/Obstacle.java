@@ -21,35 +21,35 @@ import br.com.davidbuzatto.jsge.geom.Rectangle;
 import java.awt.Color;
 
 /**
- * Classe que representa um obstáculo.
- * 
+ * Class that represents an obstacle.
+ *
  * @author Prof. Dr. David Buzatto
  */
 public class Obstacle {
     
-    /** retângulo */
+    /** rectangle */
     public Rectangle rect;
-    
-    /** sonda de colisão de cima */
+
+    /** top collision probe */
     public Rectangle topCP;
-    
-    /** sonda de colisão de baixo */
+
+    /** bottom collision probe */
     public Rectangle bottomCP;
-    
-    /** sonda de colisão da esquerda */
+
+    /** left collision probe */
     public Rectangle leftCP;
-    
-    /** sonda de colisão de direita */
+
+    /** right collision probe */
     public Rectangle rightCP;
-    
-    /** cor */
+
+    /** color */
     public Color color;
     
     /**
-     * Cria um obstáculo.
-     * 
-     * @param rect Reângulo.
-     * @param color Cor.
+     * Creates an obstacle.
+     *
+     * @param rect Rectangle.
+     * @param color Color.
      */
     public Obstacle( Rectangle rect, Color color ) {
         
@@ -90,9 +90,9 @@ public class Obstacle {
     }
     
     /**
-     * Desenha o obstáculo.
-     * 
-     * @param engine A engine.
+     * Draws the obstacle.
+     *
+     * @param engine The engine.
      */
     public void draw( EngineFrame engine ) {
         engine.fillRectangle( rect, color );

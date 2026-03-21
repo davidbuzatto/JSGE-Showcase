@@ -24,8 +24,8 @@ import br.com.davidbuzatto.jsge.math.Vector2;
 import java.awt.Color;
 
 /**
- * Exemplo de uso da câmera.
- * 
+ * Camera usage example.
+ *
  * @author Prof. Dr. David Buzatto
  */
 public class CameraExample extends EngineFrame {
@@ -36,7 +36,7 @@ public class CameraExample extends EngineFrame {
     private Camera2D camera;
     
     /**
-     * Cria o exemplo.
+     * Creates the example.
      */
     public CameraExample() {
         super( 800, 600, "Camera", 60, true );
@@ -205,8 +205,8 @@ public class CameraExample extends EngineFrame {
     }
     
     /**
-     * Executa o exemplo.
-     * @param args Argumentos.
+     * Runs the example.
+     * @param args Arguments.
      */
     public static void main( String[] args ) {
         new CameraExample();

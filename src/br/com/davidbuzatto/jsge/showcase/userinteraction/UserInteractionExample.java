@@ -20,8 +20,8 @@ import br.com.davidbuzatto.jsge.core.engine.EngineFrame;
 import br.com.davidbuzatto.jsge.geom.Rectangle;
 
 /**
- * Exemplo básico de entrada do usuário.
- * 
+ * Basic user input example.
+ *
  * @author Prof. Dr. David Buzatto
  */
 public class UserInteractionExample extends EngineFrame {
@@ -41,7 +41,7 @@ public class UserInteractionExample extends EngineFrame {
     private int lastKey;
     
     /**
-     * Cria o exemplo.
+     * Creates the example.
      */
     public UserInteractionExample() {
         super( 400, 280, "User Interaction", 60, true );
@@ -123,8 +123,8 @@ public class UserInteractionExample extends EngineFrame {
     }
     
     /**
-     * Executa o exemplo.
-     * @param args Argumentos.
+     * Runs the example.
+     * @param args Arguments.
      */
     public static void main( String[] args ) {
         new UserInteractionExample();

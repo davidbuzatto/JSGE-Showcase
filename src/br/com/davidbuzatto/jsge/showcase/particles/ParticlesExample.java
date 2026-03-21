@@ -23,15 +23,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Exemplo de geração de partículas.
- * Várias partes do código dos componentes não estão encapsuladas de propósito.
- * 
+ * Example of particle generation.
+ * Several parts of the component code are intentionally left unencapsulated.
+ *
  * @author Prof. Dr. David Buzatto
  */
 public class ParticlesExample extends EngineFrame {
     
     /**
-     * Constante para a gravidade da simulação.
+     * Constant for the simulation gravity.
      */
     public static final double GRAVITY = 50;
     
@@ -51,7 +51,7 @@ public class ParticlesExample extends EngineFrame {
     private boolean showInfo = true;
     
     /**
-     * Cria o exemplo.
+     * Creates the example.
      */
     public ParticlesExample() {
         super( 800, 450, "Particles", 60, true );
@@ -248,8 +248,8 @@ public class ParticlesExample extends EngineFrame {
     }
 
     /**
-     * Executa o exemplo.
-     * @param args Argumentos.
+     * Runs the example.
+     * @param args Arguments.
      */
     public static void main( String[] args ) {
         new ParticlesExample();
