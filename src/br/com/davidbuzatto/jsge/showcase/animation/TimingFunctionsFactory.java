@@ -23,18 +23,18 @@ import br.com.davidbuzatto.jsge.animation.tween.TweenAnimationComponentMapper;
 import br.com.davidbuzatto.jsge.animation.tween.timing.TimingTweenAnimationUpdateFunction;
 
 /**
- * Uma fábrica de funções de atualização para as animações interpoladas do
- * exemplo de animações.
- * 
+ * A factory of update functions for the tween animations in the
+ * animations example.
+ *
  * @author Prof. Dr. David Buzatto
  */
 public interface TimingFunctionsFactory {
     
     /**
-     * Fabrica uma função de interpolação em x.
-     * 
-     * @param <ComponentType> Tipo do componente.
-     * @return A função de interpolação.
+     * Creates a time-based interpolation function.
+     *
+     * @param <ComponentType> The component type.
+     * @return The interpolation function.
      */
     public static <ComponentType> TimingTweenAnimationUpdateFunction<ComponentType> tweenTime() {
         return ( 

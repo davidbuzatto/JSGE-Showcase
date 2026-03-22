@@ -21,40 +21,40 @@ import br.com.davidbuzatto.jsge.math.Vector2;
 import java.awt.Color;
 
 /**
- * Classe que representa uma partícula.
- * 
+ * Class that represents a particle.
+ *
  * @author Prof. Dr. David Buzatto
  */
 public class Particle {
 
-    /** posição */
+    /** position */
     public Vector2 pos;
-    
-    /** velocidade */
+
+    /** velocity */
     public Vector2 vel;
-    
-    /** raio */
+
+    /** radius */
     public double radius;
-    
-    /** atrito */
+
+    /** friction */
     public double friction;
-    
-    /** elasticidade */
+
+    /** elasticity */
     public double elasticity;
-    
-    /** cor */
+
+    /** color */
     public Color color;
     
     private static final double MAX_FALL_SPEED = 500;
 
     /**
-     * Cria uma partícula do exemplo.
-     * @param pos Posição.
-     * @param vel Velocidade.
-     * @param radius Raio.
-     * @param friction Atrito.
-     * @param elasticity Elasticidade.
-     * @param color Cor.
+     * Creates an example particle.
+     * @param pos Position.
+     * @param vel Velocity.
+     * @param radius Radius.
+     * @param friction Friction.
+     * @param elasticity Elasticity.
+     * @param color Color.
      */
     public Particle( Vector2 pos, Vector2 vel, double radius, double friction, double elasticity, Color color ) {
         this.pos = pos;
@@ -66,9 +66,9 @@ public class Particle {
     }
     
     /**
-     * Atualiza uma partícula.
-     * 
-     * @param delta Variação do tempo.
+     * Updates a particle.
+     *
+     * @param delta Time delta.
      */
     void update( double delta ) {
 
@@ -85,8 +85,8 @@ public class Particle {
     }
     
     /**
-     * Desenha uma partícula.
-     * 
+     * Draws a particle.
+     *
      * @param engine EngineFrame.
      */
     void draw( EngineFrame engine ) {

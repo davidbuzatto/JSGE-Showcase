@@ -50,8 +50,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Exemplo de uso dos componentes IMGUI (Immediate Mode Graphical User Interface).
- * 
+ * Example of usage of IMGUI (Immediate Mode Graphical User Interface) components.
+ *
  * @author Prof. Dr. David Buzatto
  */
 public class IMGUIExample extends EngineFrame {
@@ -138,7 +138,7 @@ public class IMGUIExample extends EngineFrame {
     private Image moonIcon;
     
     /**
-     * Cria o exemplo.
+     * Creates the example.
      */
     public IMGUIExample() {
         super( 1070, 840, "IMGUI", 60, true );
@@ -724,8 +724,8 @@ public class IMGUIExample extends EngineFrame {
     }
     
     /**
-     * Executa o exemplo.
-     * @param args Argumentos.
+     * Runs the example.
+     * @param args Arguments.
      */
     public static void main( String[] args ) {
         new IMGUIExample();

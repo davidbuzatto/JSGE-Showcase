@@ -24,8 +24,8 @@ import br.com.davidbuzatto.jsge.image.ImageUtils;
 import java.awt.Font;
 
 /**
- * Exemplos de carga, desenho e processamento de imagens.
- * 
+ * Examples of image loading, drawing, and processing.
+ *
  * @author Prof. Dr. David Buzatto
  */
 public class ImageLoadingProcessingExample extends EngineFrame {
@@ -38,7 +38,7 @@ public class ImageLoadingProcessingExample extends EngineFrame {
     private int rotationAngle;
     
     /**
-     * Cria o exemplo.
+     * Creates the example.
      */
     public ImageLoadingProcessingExample() {
         super( 900, 650, "Image Loading and Processing", 60, true );
@@ -115,8 +115,8 @@ public class ImageLoadingProcessingExample extends EngineFrame {
     }
     
     /**
-     * Executa o exemplo.
-     * @param args Argumentos.
+     * Runs the example.
+     * @param args Arguments.
      */
     public static void main( String[] args ) {
         new ImageLoadingProcessingExample();

@@ -20,20 +20,20 @@ import br.com.davidbuzatto.jsge.core.engine.EngineFrame;
 import br.com.davidbuzatto.jsge.math.Vector2;
 
 /**
- * Exemplo de simulação da bolinha.
- * 
+ * Bouncing ball simulation example.
+ *
  * @author Prof. Dr. David Buzatto
  */
 public class BouncingBallExample extends EngineFrame {
 
     /**
-     * Constante para a gravidade da simulação.
+     * Constant for the simulation gravity.
      */
     public static final double GRAVITY = 50;
     private Ball ball;
     
     /**
-     * Cria o exemplo.
+     * Creates the example.
      */
     public BouncingBallExample() {
         super( 800, 450, "Bouncing Ball", 60, true );
@@ -64,8 +64,8 @@ public class BouncingBallExample extends EngineFrame {
     }
     
     /**
-     * Executa o exemplo.
-     * @param args Argumentos.
+     * Runs the example.
+     * @param args Arguments.
      */
     public static void main( String[] args ) {
         new BouncingBallExample();

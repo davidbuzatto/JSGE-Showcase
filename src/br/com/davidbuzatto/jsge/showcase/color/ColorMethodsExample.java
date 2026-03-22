@@ -27,8 +27,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Exemplo de uso de alguns métodos para manipulação de cores.
- * 
+ * Example of using some color manipulation methods.
+ *
  * @author Prof. Dr. David Buzatto
  */
 public class ColorMethodsExample extends EngineFrame {
@@ -45,7 +45,7 @@ public class ColorMethodsExample extends EngineFrame {
     private Color overlayColor = new Color( 0, 0, 0, 100 );
     
     /**
-     * Cria o exemplo.
+     * Creates the example.
      */
     public ColorMethodsExample() {
         super( 800, 450, "Color Methods", 60, true );
@@ -179,8 +179,8 @@ public class ColorMethodsExample extends EngineFrame {
     }
     
     /**
-     * Executa o exemplo.
-     * @param args Argumentos.
+     * Runs the example.
+     * @param args Arguments.
      */
     public static void main( String[] args ) {
         new ColorMethodsExample();

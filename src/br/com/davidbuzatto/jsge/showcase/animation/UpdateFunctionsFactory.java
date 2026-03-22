@@ -23,18 +23,18 @@ import br.com.davidbuzatto.jsge.animation.tween.TweenAnimationUpdateFunction;
 import br.com.davidbuzatto.jsge.animation.tween.TweenAnimationComponentMapper;
 
 /**
- * Uma fábrica de funções de atualização para as animações interpoladas do
- * exemplo de animações.
- * 
+ * A factory of update functions for the tween animations in the
+ * animations example.
+ *
  * @author Prof. Dr. David Buzatto
  */
 public interface UpdateFunctionsFactory {
     
     /**
-     * Fabrica uma função de interpolação em x.
-     * 
-     * @param <ComponentType> Tipo do componente.
-     * @return A função de interpolação.
+     * Creates an interpolation function along the x axis.
+     *
+     * @param <ComponentType> The component type.
+     * @return The interpolation function.
      */
     public static <ComponentType> TweenAnimationUpdateFunction<ComponentType> tweenX() {
         return ( 
@@ -62,10 +62,10 @@ public interface UpdateFunctionsFactory {
     }
     
     /**
-     * Fabrica uma função de interpolação em y.
-     * 
-     * @param <ComponentType> Tipo do componente.
-     * @return A função de interpolação.
+     * Creates an interpolation function along the y axis.
+     *
+     * @param <ComponentType> The component type.
+     * @return The interpolation function.
      */
     public static <ComponentType> TweenAnimationUpdateFunction<ComponentType> tweenY() {
         return ( 
@@ -93,10 +93,10 @@ public interface UpdateFunctionsFactory {
     }
     
     /**
-     * Fabrica uma função de interpolação em x e y.
-     * 
-     * @param <ComponentType> Tipo do componente.
-     * @return A função de interpolação.
+     * Creates an interpolation function along both x and y axes.
+     *
+     * @param <ComponentType> The component type.
+     * @return The interpolation function.
      */
     public static <ComponentType> TweenAnimationUpdateFunction<ComponentType> tweenXY() {
         return ( 
@@ -140,10 +140,11 @@ public interface UpdateFunctionsFactory {
         };
     }
     
-    /* Fabrica uma função de interpolação para raio.
-     * 
-     * @param <ComponentType> Tipo do componente.
-     * @return A função de interpolação.
+    /**
+     * Creates an interpolation function for the radius.
+     *
+     * @param <ComponentType> The component type.
+     * @return The interpolation function.
      */
     public static <ComponentType> TweenAnimationUpdateFunction<ComponentType> tweenRadius() {
         return ( 
@@ -172,10 +173,10 @@ public interface UpdateFunctionsFactory {
     }
     
     /**
-     * Fabrica uma função de interpolação para transparência.
-     * 
-     * @param <ComponentType> Tipo do componente.
-     * @return A função de interpolação.
+     * Creates an interpolation function for transparency (alpha).
+     *
+     * @param <ComponentType> The component type.
+     * @return The interpolation function.
      */
     public static <ComponentType> TweenAnimationUpdateFunction<ComponentType> tweenAlpha() {
         return ( 
@@ -205,10 +206,10 @@ public interface UpdateFunctionsFactory {
     }
     
     /**
-     * Fabrica uma função de interpolação para rotação com suavização.
-     * 
-     * @param <ComponentType> Tipo do componente.
-     * @return A função de interpolação.
+     * Creates an interpolation function for rotation.
+     *
+     * @param <ComponentType> The component type.
+     * @return The interpolation function.
      */
     public static <ComponentType> TweenAnimationUpdateFunction<ComponentType> tweenRotation() {
         return ( 

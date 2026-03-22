@@ -49,8 +49,8 @@ import java.util.List;
 import java.util.function.DoubleFunction;
 
 /**
- * Exemplos de animações.
- * 
+ * Animation examples.
+ *
  * @author Prof. Dr. David Buzatto
  */
 public class AnimationsExample extends EngineFrame {
@@ -225,7 +225,7 @@ public class AnimationsExample extends EngineFrame {
     }
     
     /**
-     * Cria o exemplo.
+     * Creates the example.
      */
     public AnimationsExample() {
         super( 875, 940, "Animations", 60, true );
@@ -235,8 +235,8 @@ public class AnimationsExample extends EngineFrame {
     public void create() {
         
         /**
-         * Cada animação baseada em frames precisa de uma lista de imagens
-         * ou de componentes desenháveis (interface Drawable).
+         * Each frame-based animation requires a list of images
+         * or drawable components (Drawable interface).
          */
         List<ImageAnimationFrame> imageFrames = new ArrayList<>();
         imageFrames.add( new ImageAnimationFrame( loadImage( "resources/images/coin0.png" ) ) );
@@ -322,9 +322,9 @@ public class AnimationsExample extends EngineFrame {
         repeatEFR = new Button( new Rectangle( 740, 52, 30, 30 ), "R" );
         
         /**
-         * Os mapeadores servem como ponte de comunicação entre as funções de 
-         * atualização (nesse caso EasingTweenAnimationUpdateFunction) e os
-         * componentes que serão atualizados.
+         * Mappers act as a communication bridge between the update functions
+         * (in this case EasingTweenAnimationUpdateFunction) and the
+         * components that will be updated.
          */
         TweenAnimationComponentMapper<Rectangle> posMapperEasing = new TweenAnimationComponentMapper<>( new Rectangle( 0, 0, 80, 80 ) ){
             
@@ -439,9 +439,9 @@ public class AnimationsExample extends EngineFrame {
         };
         
         /**
-         * Os mapeadores servem como ponte de comunicação entre as funções de 
-         * atualização (nesse caso TweenAnimationUpdateFunction) e os
-         * componentes que serão atualizados.
+         * Mappers act as a communication bridge between the update functions
+         * (in this case TweenAnimationUpdateFunction) and the
+         * components that will be updated.
          */
         TweenAnimationComponentMapper<Rectangle> posMapper = new TweenAnimationComponentMapper<>( new Rectangle( 0, 0, 80, 80 ) ){
             
@@ -589,10 +589,10 @@ public class AnimationsExample extends EngineFrame {
         };
         
         /**
-         * Para simplificar a forma que diversos parâmetros são passados para
-         * a execução da função de atualização, use-se a classe TweenAnimationProperties.
-         * Todos esses parâmetros poderão ser acessos e alterados caso necessário
-         * dentro da função de atualização correspondente.
+         * To simplify passing multiple parameters to the update function
+         * execution, the TweenAnimationProperties class is used.
+         * All these parameters can be accessed and modified as needed
+         * inside the corresponding update function.
          */
         TweenAnimationProperties pPosEasing = TweenAnimationProperties.of( 
             "x1", 40,
@@ -670,11 +670,11 @@ public class AnimationsExample extends EngineFrame {
         easingFunctionImage = DrawingUtils.plot( easingFunctionPair.function, 200, 200, fimH, fimV, BLACK, BLUE );
         
         etaPos = new EasingTweenAnimation<>(
-            pPosEasing,                                        // propriedades
-            posMapperEasing,                                   // mapeador
-            EasingUpdateFunctionsFactory.<Rectangle>tweenX(),  // função de atualização
-            easingFunctionPair.function,                       // função de suavização
-            0.5                                                // 50% por segundo (2 segundos para executar a interpolação inteira)
+            pPosEasing,                                        // properties
+            posMapperEasing,                                   // mapper
+            EasingUpdateFunctionsFactory.<Rectangle>tweenX(),  // update function
+            easingFunctionPair.function,                       // easing function
+            0.5                                                // 50% per second (2 seconds to complete the full interpolation)
         );
         
         etaRadiusg = new EasingTweenAnimation<>(
@@ -702,9 +702,9 @@ public class AnimationsExample extends EngineFrame {
         );
         
         taPos = new TweenAnimation<>(
-            pPos,                                              // propriedades
-            posMapper,                                         // mapeador
-            UpdateFunctionsFactory.<Rectangle>tweenX()         // função de atualização
+            pPos,                                              // properties
+            posMapper,                                         // mapper
+            UpdateFunctionsFactory.<Rectangle>tweenX()         // update function
         );
         
         taRadius = new TweenAnimation<>(
@@ -1030,8 +1030,8 @@ public class AnimationsExample extends EngineFrame {
     }
     
     /**
-     * Executa o exemplo.
-     * @param args Argumentos.
+     * Runs the example.
+     * @param args Arguments.
      */
     public static void main( String[] args ) {
         new AnimationsExample();

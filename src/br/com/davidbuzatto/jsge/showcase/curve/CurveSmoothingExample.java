@@ -23,8 +23,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Exemplo de uso dos métodos de suavização de curvas.
- * 
+ * Example of using curve smoothing methods.
+ *
  * @author Prof. Dr. David Buzatto
  */
 public class CurveSmoothingExample extends EngineFrame {
@@ -38,7 +38,7 @@ public class CurveSmoothingExample extends EngineFrame {
     private int iterations;
     
     /**
-     * Cria o exemplo.
+     * Creates the example.
      */
     public CurveSmoothingExample() {
         super( 600, 600, "Curve Smoothing", 60, true );
@@ -142,8 +142,8 @@ public class CurveSmoothingExample extends EngineFrame {
     }
     
     /**
-     * Executa o exemplo.
-     * @param args Argumentos.
+     * Runs the example.
+     * @param args Arguments.
      */
     public static void main( String[] args ) {
         new CurveSmoothingExample();
