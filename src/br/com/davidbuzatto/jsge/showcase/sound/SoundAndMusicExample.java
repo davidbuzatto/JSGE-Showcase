@@ -189,17 +189,17 @@ public class SoundAndMusicExample extends EngineFrame {
         
         if ( btnPrevious.down ) {
             if ( music.isPlaying() ) {
-                int p = music.getTimePlayed() - (int) ( delta * 30 );
+                double p = music.getTimePlayed() - delta * 30;
                 if ( p < 0 ) {
                     p = 0;
                 }
                 music.seek( p );
             }
         }
-        
+
         if ( btnNext.down ) {
             if ( music.isPlaying() ) {
-                int p = music.getTimePlayed() + (int) ( delta * 30 );
+                double p = music.getTimePlayed() + delta * 30;
                 if ( p >= music.getTimeLength() ) {
                     p = music.getTimeLength();
                 }
@@ -234,10 +234,10 @@ public class SoundAndMusicExample extends EngineFrame {
             double w = music.getTimePlayed() / (double) music.getTimeLength() * 340;
             
             fillRectangle( 15, 65, w, 10, DARKGRAY );
-            drawText( 
-                    String.format( "%03d/%03d" , 
-                            music.getTimePlayed(), 
-                            music.getTimeLength() ), 
+            drawText(
+                    String.format( "%03d/%03d" ,
+                            (int) music.getTimePlayed(),
+                            (int) music.getTimeLength() ),
                     370, 63, BLACK
             );
             
