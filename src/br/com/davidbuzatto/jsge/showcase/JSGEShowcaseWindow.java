@@ -30,6 +30,7 @@ import br.com.davidbuzatto.jsge.showcase.image.ImageLoadingProcessingExample;
 import br.com.davidbuzatto.jsge.showcase.imgui.IMGUIExample;
 import br.com.davidbuzatto.jsge.showcase.painting.PaintingCapabilitiesExample;
 import br.com.davidbuzatto.jsge.showcase.particles.ParticlesExample;
+import br.com.davidbuzatto.jsge.showcase.perlin.PerlinNoiseExample;
 import br.com.davidbuzatto.jsge.showcase.primitives.methods.DrawingWithPrimitiveMethodsExample;
 import br.com.davidbuzatto.jsge.showcase.primitives.objects.DrawingWithPrimitiveObjectsExample;
 import br.com.davidbuzatto.jsge.showcase.scissor.ScissorExample;
@@ -73,6 +74,7 @@ public class JSGEShowcaseWindow extends javax.swing.JFrame {
         btnPaintingCapabilities = new javax.swing.JButton();
         btnCollisionDetection = new javax.swing.JButton();
         btnCurveSmoothing = new javax.swing.JButton();
+        btnPerlinNoise = new javax.swing.JButton();
         btnImageLoadingAndProcessing = new javax.swing.JButton();
         btnUserInteraction = new javax.swing.JButton();
         btnIMGUI = new javax.swing.JButton();
@@ -126,6 +128,13 @@ public class JSGEShowcaseWindow extends javax.swing.JFrame {
         btnCurveSmoothing.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCurveSmoothingActionPerformed(evt);
+            }
+        });
+
+        btnPerlinNoise.setText("Perlin Noise");
+        btnPerlinNoise.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPerlinNoiseActionPerformed(evt);
             }
         });
 
@@ -247,7 +256,8 @@ public class JSGEShowcaseWindow extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(btnTurtleGraphics, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnPenroseLSystem, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnPenroseLSystem, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnPerlinNoise, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -265,6 +275,8 @@ public class JSGEShowcaseWindow extends javax.swing.JFrame {
                 .addComponent(btnCollisionDetection)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnCurveSmoothing)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnPerlinNoise)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnImageLoadingAndProcessing)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -370,6 +382,10 @@ public class JSGEShowcaseWindow extends javax.swing.JFrame {
         initExample( new PenroseLSystemExample() );
     }//GEN-LAST:event_btnPenroseLSystemActionPerformed
 
+    private void btnPerlinNoiseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPerlinNoiseActionPerformed
+        initExample( new PerlinNoiseExample() );
+    }//GEN-LAST:event_btnPerlinNoiseActionPerformed
+
     private void initExample( EngineFrame example ) {
         example.setIconImage( logoImage.buffImage );
         example.setDefaultCloseOperation( DISPOSE_ON_CLOSE );
@@ -428,6 +444,7 @@ public class JSGEShowcaseWindow extends javax.swing.JFrame {
     private javax.swing.JButton btnPaintingCapabilities;
     private javax.swing.JButton btnParticles;
     private javax.swing.JButton btnPenroseLSystem;
+    private javax.swing.JButton btnPerlinNoise;
     private javax.swing.JButton btnScissor;
     private javax.swing.JButton btnSoundAndMusic;
     private javax.swing.JButton btnTurtleGraphics;

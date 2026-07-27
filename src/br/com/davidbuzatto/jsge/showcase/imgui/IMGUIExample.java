@@ -208,7 +208,7 @@ public class IMGUIExample extends EngineFrame {
         );
         list = new GuiList( x, y += vSpacing, 240, 130, 
                 List.<String>of( 
-                        "gelato","cannoli","tiramisu","cassata","cantuccini","babà al rum" 
+                        "gelato", "cannoli", "tiramisu", "cassata", "cantuccini", "babà al rum" 
                 )
         );
 

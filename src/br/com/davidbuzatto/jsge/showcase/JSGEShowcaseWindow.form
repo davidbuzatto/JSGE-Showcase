@@ -49,6 +49,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="btnPenroseLSystem" min="-2" pref="189" max="-2" attributes="0"/>
                   </Group>
+                  <Component id="btnPerlinNoise" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -69,6 +70,8 @@
               <Component id="btnCollisionDetection" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="btnCurveSmoothing" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="btnPerlinNoise" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="btnImageLoadingAndProcessing" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
@@ -149,6 +152,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCurveSmoothingActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnPerlinNoise">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Perlin Noise"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPerlinNoiseActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnImageLoadingAndProcessing">
