@@ -175,11 +175,11 @@ public class GamepadsExample extends EngineFrame {
         clearBackground( WHITE );
         
         fillRectangle( 40, 60, 60, 30, l2Down ? GOLD : GRAY );
-        fillRectangle( 40, 90 - 30 * leftTriggerPressure, 60, 30 * leftTriggerPressure, GOLD );
+        fillRectangle( 40, 90 - 30 * leftTriggerPressure, 60, 30 * leftTriggerPressure, BLUE );
         fillRectangle( 40, 110, 60, 30, l1Down ? GOLD : GRAY );
         
         fillRectangle( 320, 60, 60, 30, r2Down ? GOLD : GRAY );
-        fillRectangle( 320, 90 - 30 * rightTriggerPressure, 60, 30 * rightTriggerPressure, GOLD );
+        fillRectangle( 320, 90 - 30 * rightTriggerPressure, 60, 30 * rightTriggerPressure, BLUE );
         fillRectangle( 320, 110, 60, 30, r1Down ? GOLD : GRAY );
 
         drawText( String.format( "%.2f", leftTriggerPressure ), 45, 45, 14, BLACK );
