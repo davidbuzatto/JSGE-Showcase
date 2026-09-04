@@ -37,6 +37,7 @@ public class GamepadsExample extends EngineFrame {
     private boolean downDown;
     
     private boolean middleLeftDown;
+    private boolean middleDown;
     private boolean middleRightDown;
     private boolean leftThumbDown;
     private boolean rightThumbDown;
@@ -50,7 +51,6 @@ public class GamepadsExample extends EngineFrame {
     private double ly;
     private double rx;
     private double ry;
-    private double z;
     private double leftTriggerPressure;
     private double rightTriggerPressure;
     
@@ -70,7 +70,7 @@ public class GamepadsExample extends EngineFrame {
      * Creates the example.
      */
     public GamepadsExample() {
-        super( 620, 505, "Gamepads", 60, true );
+        super( 620, 525, "Gamepads", 60, true );
     }
     
     @Override
@@ -82,6 +82,7 @@ public class GamepadsExample extends EngineFrame {
             GAMEPAD_BUTTON_LEFT_FACE_RIGHT,
             GAMEPAD_BUTTON_LEFT_FACE_DOWN,
             GAMEPAD_BUTTON_MIDDLE_LEFT,
+            GAMEPAD_BUTTON_MIDDLE,
             GAMEPAD_BUTTON_MIDDLE_RIGHT,
             GAMEPAD_BUTTON_LEFT_THUMB,
             GAMEPAD_BUTTON_RIGHT_THUMB,
@@ -94,9 +95,9 @@ public class GamepadsExample extends EngineFrame {
             GAMEPAD_BUTTON_RIGHT_TRIGGER_1,
             GAMEPAD_BUTTON_RIGHT_TRIGGER_2
         };
-        
+
         labels = new String[]{
-            "left", "up", "right", "down", "select", "start", "left thumb", "right thumb",
+            "left", "up", "right", "down", "select", "guide", "start", "left thumb", "right thumb",
             "Square/X", "Triangle/Y", "Circle/B", "Cross/A", "L1/LB", "L2/LT", "R1/RB", "R2/RT"
         };
         
@@ -121,6 +122,7 @@ public class GamepadsExample extends EngineFrame {
         downDown = isGamepadButtonDown( currentGamepad, GAMEPAD_BUTTON_LEFT_FACE_DOWN );
         
         middleLeftDown = isGamepadButtonDown( currentGamepad, GAMEPAD_BUTTON_MIDDLE_LEFT );
+        middleDown = isGamepadButtonDown( currentGamepad, GAMEPAD_BUTTON_MIDDLE );
         middleRightDown = isGamepadButtonDown( currentGamepad, GAMEPAD_BUTTON_MIDDLE_RIGHT );
         leftThumbDown = isGamepadButtonDown( currentGamepad, GAMEPAD_BUTTON_LEFT_THUMB );
         rightThumbDown = isGamepadButtonDown( currentGamepad, GAMEPAD_BUTTON_RIGHT_THUMB );
@@ -134,7 +136,6 @@ public class GamepadsExample extends EngineFrame {
         ly = getGamepadAxisMovement( currentGamepad, GAMEPAD_AXIS_LEFT_Y );
         rx = getGamepadAxisMovement( currentGamepad, GAMEPAD_AXIS_RIGHT_X );
         ry = getGamepadAxisMovement( currentGamepad, GAMEPAD_AXIS_RIGHT_Y );
-        z = getGamepadAxisMovement( currentGamepad, GAMEPAD_AXIS_Z );
         leftTriggerPressure = getGamepadAxisMovement( currentGamepad, GAMEPAD_AXIS_LEFT_TRIGGER );
         rightTriggerPressure = getGamepadAxisMovement( currentGamepad, GAMEPAD_AXIS_RIGHT_TRIGGER );
         
@@ -174,17 +175,16 @@ public class GamepadsExample extends EngineFrame {
         clearBackground( WHITE );
         
         fillRectangle( 40, 60, 60, 30, l2Down ? GOLD : GRAY );
-        fillRectangle( 40, 90 - 30 * leftTriggerPressure, 60, 30 * leftTriggerPressure, BLUE );
+        fillRectangle( 40, 90 - 30 * leftTriggerPressure, 60, 30 * leftTriggerPressure, GOLD );
         fillRectangle( 40, 110, 60, 30, l1Down ? GOLD : GRAY );
         
         fillRectangle( 320, 60, 60, 30, r2Down ? GOLD : GRAY );
-        fillRectangle( 320, 90 - 30 * rightTriggerPressure, 60, 30 * rightTriggerPressure, BLUE );
+        fillRectangle( 320, 90 - 30 * rightTriggerPressure, 60, 30 * rightTriggerPressure, GOLD );
         fillRectangle( 320, 110, 60, 30, r1Down ? GOLD : GRAY );
-        
-        fillRectangle( 160, 60, 100 * ( z + 1 ) / 2, 30, BLUE );
-        drawRectangle( 160, 60, 100, 29, BLACK );
-        drawText( String.format( "%+.3f", z ), 175, 68, 20, BLACK );
-        
+
+        drawText( String.format( "%.2f", leftTriggerPressure ), 45, 45, 14, BLACK );
+        drawText( String.format( "%.2f", rightTriggerPressure ), 325, 45, 14, BLACK );
+
         fillRectangle( 10, 210, 40, 40, leftDown ? GOLD : GRAY );
         fillRectangle( 50, 170, 40, 40, upDown ? GOLD : GRAY );
         fillRectangle( 90, 210, 40, 40, rightDown ? GOLD : GRAY );
@@ -195,8 +195,11 @@ public class GamepadsExample extends EngineFrame {
         fillPolygon( 70, 270, 3, 10, 90, BLACK );
         
         fillRectangle( 160, 220, 40, 20, middleLeftDown ? GOLD : GRAY );
+        fillCircle( 210, 195, 14, middleDown ? GOLD : GRAY );
         fillRectangle( 220, 220, 40, 20, middleRightDown ? GOLD : GRAY );
-        
+
+        String midLabel = "";
+
         switch ( currentSkin ) {
             case 0:
                 drawText( "L2", 58, 68, 20, BLACK );
@@ -205,6 +208,7 @@ public class GamepadsExample extends EngineFrame {
                 drawText( "R1", 338, 118, 20, BLACK );
                 drawText( "select", 156, 245, 14, BLACK );
                 drawText( "start", 220, 245, 14, BLACK );
+                midLabel = "PS";
                 break;
             case 1:
                 drawText( "LT", 58, 68, 20, BLACK );
@@ -213,6 +217,7 @@ public class GamepadsExample extends EngineFrame {
                 drawText( "RB", 338, 118, 20, BLACK );
                 drawText( "back", 164, 245, 14, BLACK );
                 drawText( "start", 220, 245, 14, BLACK );
+                midLabel = "guide";
                 break;
             case 2:
                 drawText( "ZL", 58, 68, 20, BLACK );
@@ -221,8 +226,11 @@ public class GamepadsExample extends EngineFrame {
                 drawText( "R", 344, 118, 20, BLACK );
                 drawText( "select", 156, 245, 14, BLACK );
                 drawText( "start", 220, 245, 14, BLACK );
+                midLabel = "home";
                 break;
         }
+
+        drawText( midLabel, 208 - measureText( midLabel, 10 ) / 2, 165, 14, BLACK );
         
         fillCircle( 135, 340, 40, LIGHTGRAY );
         fillCircle( 135, 340, 20, leftThumbDown ? GOLD : GRAY );
@@ -303,34 +311,34 @@ public class GamepadsExample extends EngineFrame {
             }
         }
         
-        drawLine( 0, 390, getScreenWidth(), 390, BLACK );
-        
+        drawLine( 0, 410, getScreenWidth(), 410, BLACK );
+
         String aGpads = "Available Gamepads:";
         int startAGpads = measureText( aGpads, 14 ) + 20;
-        drawText( aGpads, 10, 400, 14, BLACK );
+        drawText( aGpads, 10, 420, 14, BLACK );
         for ( int i = 0; i < availableGamepads.length; i++ ) {
-            fillRectangle( startAGpads + i * 20, 395, 20, 20, availableGamepads[i] ? GREEN : GRAY );
-            drawRectangle( startAGpads + i * 20, 395, 20, 20, BLACK );
-            drawText( String.format( "%d", i+1 ), startAGpads + i * 20 + 6, 401, 14, i == currentGamepad ? BLACK : DARKGRAY );
+            fillRectangle( startAGpads + i * 20, 415, 20, 20, availableGamepads[i] ? GREEN : GRAY );
+            drawRectangle( startAGpads + i * 20, 415, 20, 20, BLACK );
+            drawText( String.format( "%d", i+1 ), startAGpads + i * 20 + 6, 421, 14, i == currentGamepad ? BLACK : DARKGRAY );
         }
-        
-        drawText( "press <LEFT/RIGHT> to change", startAGpads + 90, 400, 14, BLACK );
-        
+
+        drawText( "press <LEFT/RIGHT> to change", startAGpads + 90, 420, 14, BLACK );
+
         String cGpad = "Current Gamepad:";
         int startCGpads = measureText( cGpad, 14 ) + 10;
-        drawText( 
-            String.format( 
-                "%s\n  id: %d\n  name: %s", 
+        drawText(
+            String.format(
+                "%s\n  id: %d\n  name: %s",
                 cGpad,
-                currentGamepad+1, 
+                currentGamepad+1,
                 getGamepadName( currentGamepad )
-            ), 
-            10, 430, 14, BLACK
+            ),
+            10, 450, 14, BLACK
         );
-        
+
         int xCGpads = startAGpads + 10 + 20 * currentGamepad;
-        drawLine( startCGpads, 435, xCGpads, 435, BLACK );
-        drawLine( xCGpads, 435, xCGpads, 415, BLACK );
+        drawLine( startCGpads, 455, xCGpads, 455, BLACK );
+        drawLine( xCGpads, 455, xCGpads, 435, BLACK );
         
         String skinLabel = "";
         Color skinLabelColor = BLACK;
@@ -351,8 +359,8 @@ public class GamepadsExample extends EngineFrame {
         }
         
         String skinText = "\"Skin\":";
-        drawText( skinText, 10, 485, 14, BLACK );
-        drawText( String.format( "%s - press <SPACE> to change", skinLabel ), measureText( skinText, 14 ) + 20, 485, 14, skinLabelColor );
+        drawText( skinText, 10, 505, 14, BLACK );
+        drawText( String.format( "%s - press <SPACE> to change", skinLabel ), measureText( skinText, 14 ) + 20, 505, 14, skinLabelColor );
         
         drawFPS( 10, 10 );
         
